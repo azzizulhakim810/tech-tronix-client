@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "LG",
+    "image": "https://i.ibb.co/nDTnkj5/Artboard-3.png"
+  },
+  {
+    "id": 2,
+    "name": "SAMSUNG",
+    "image": "https://i.ibb.co/YWP7J8D/Artboard-4.png"
+  },
+  {
+    "id": 3,
+    "name": "PANASONIC",
+    "image": "https://i.ibb.co/1z5qk3G/Artboard-2.png"
+  },
+  {
+    "id": 4,
+    "name": "GOOGLE",
+    "image": "https://i.ibb.co/bvCFnhn/Artboard-6.png"
+  },
+  {
+    "id": 5,
+    "name": "SONY",
+    "image": "https://i.ibb.co/DtBPC0C/Artboard-1.png"
+  },
+  {
+    "id": 6,
+    "name": "APPLE",
+    "image": "https://i.ibb.co/9WV6mNn/Artboard-5.png"
+  }
+]
