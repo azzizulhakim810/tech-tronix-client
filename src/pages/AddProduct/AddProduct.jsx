@@ -1,32 +1,55 @@
 // import Swal from 'sweetalert2';
 
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+
 const AddProduct = () => {
-  const handleAddCoffee = (event) => {
+  const navigate = useNavigate();
+  const handleAddProduct = (event) => {
     event.preventDefault();
 
     const form = event.target;
 
+    const url = form.url.value;
     const name = form.name.value;
-    const quantity = form.quantity.value;
-    const supplier = form.supplier.value;
-    const taste = form.taste.value;
-    const category = form.category.value;
-    const details = form.details.value;
-    const photo = form.photo.value;
+    const brandName = form.brandName.value;
+    const type = form.type.value;
+    const price = form.price.value;
+    const description = form.description.value;
+    const rating = form.rating.value;
 
-    const newCoffee = {
+    const newProduct = {
+      url,
       name,
-      quantity,
-      supplier,
-      taste,
-      category,
-      details,
-      photo,
+      brandName,
+      type,
+      price,
+      description,
+      rating,
     };
 
-    console.log(newCoffee);
+    console.log(newProduct);
 
     // send data to the server
+    fetch('http://localhost:5000/product', {
+      method:'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(newProduct)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      if(data.insertedId) {
+        Swal.fire(
+          'Great!',
+          "The Product Has Been Added",
+          'success'
+        );
+        navigate('/');
+      }
+    })
   };
 
   return (
@@ -39,7 +62,7 @@ const AddProduct = () => {
           <div className="py-[0.9px] my-3 bg-red-600"></div>
         </div>
 
-        <form onSubmit={handleAddCoffee}>
+        <form onSubmit={handleAddProduct}>
 
           {/* form Photo url row */}
           <div className="mb-8">
@@ -50,8 +73,8 @@ const AddProduct = () => {
 
               <label className="input-group">
                 <input
-                  type="text"
-                  name="photo"
+                  type="url"
+                  name="url"
                   placeholder="Photo URL"
                   className="input input-bordered w-full"
                 />
@@ -77,7 +100,7 @@ const AddProduct = () => {
               </label>
             </div>
 
-            <div className="form-control md:w-1/2 ml-4">
+            <div className="form-control md:w-1/2 md:ml-4">
               <label className="label">
                 <span className="label-text">Brand Name</span>
               </label>
@@ -85,7 +108,7 @@ const AddProduct = () => {
               <label className="input-group">
                 <input
                   type="text"
-                  name="Brand Name"
+                  name="brandName"
                   placeholder="Brand Name"
                   className="input input-bordered w-full"
                 />
@@ -101,7 +124,7 @@ const AddProduct = () => {
               </label>
 
               <label className="input-group">
-                <select className="input input-bordered w-full">
+                {/* <select className="input input-bordered w-full">
                   <option value="0">Product Type</option>
                   <option value="Phone">Phone</option>
                   <option value="Tablet">Tablet</option>
@@ -114,11 +137,18 @@ const AddProduct = () => {
                   <option value="Airphone/AirBud">Airphone/AirBud</option>
                   <option value="SmartWatch">SmartWatch</option>
                   <option value="Door Lock">Door Lock</option>
-                </select>
+                </select> */}
+                <input
+                  type="text"
+                  name="type"
+                  placeholder="Type (Ex- Phone/Monitor/Refrigerator/TV)"
+                  className="input input-bordered w-full"
+                />
+
               </label>
             </div>
 
-            <div className="form-control md:w-1/2 ml-4">
+            <div className="form-control md:w-1/2 md:ml-4">
               <label className="label">
                 <span className="label-text">Price</span>
               </label>
@@ -126,7 +156,7 @@ const AddProduct = () => {
               <label className="input-group">
                 <input
                   type="number"
-                  name="Price"
+                  name="price"
                   placeholder="Price"
                   className="input input-bordered w-full"
                 />
@@ -151,7 +181,7 @@ const AddProduct = () => {
               </label>
             </div>
 
-            <div className="form-control md:w-1/2 ml-4">
+            <div className="form-control md:w-1/2 md:ml-4">
               <label className="label">
                 <span className="label-text">Rating</span>
               </label>
