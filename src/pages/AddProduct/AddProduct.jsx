@@ -12,7 +12,7 @@ const AddProduct = () => {
 
     const url = form.url.value;
     const name = form.name.value;
-    const brandName = form.brandName.value;
+    const brandName = form.brandName.value.toUpperCase();
     const type = form.type.value;
     const price = form.price.value;
     const description = form.description.value;
@@ -47,7 +47,8 @@ const AddProduct = () => {
           "The Product Has Been Added",
           'success'
         );
-        navigate('/');
+        navigate('/addProduct');
+        form.reset();
       }
     })
   };

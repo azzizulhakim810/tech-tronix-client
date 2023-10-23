@@ -1,10 +1,24 @@
-import { useLoaderData } from "react-router-dom";
 import Brands from "../../components/Brands/Brands";
 import { BsCurrencyDollar, BsGift, BsTruck } from 'react-icons/bs';
+import { useEffect, useState } from "react";
+
 
 const Home = () => {
-  const brands = useLoaderData();
+  const [brands, setBrands] = useState();
+  const [loading, setLoading] = useState(true);
+  // const brands = useLoaderData();
   // console.log(brands);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch ('brands.json');
+      const data = await res.json();
+      // console.log(data);
+      setBrands(data);
+      setLoading(false);
+    }
+    fetchData();
+  }, [])
   return (
     <div>
       {/* Hero Section  */}
@@ -41,7 +55,10 @@ const Home = () => {
         
 
       <div className="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-1 gap-5 w-11/12 mx-auto">
-      {brands.map((brand) => (
+        {
+          loading && <span className="loading loading-spinner text-error text-6xl mx-auto flex justify-center items-center py-5 "></span>
+        }
+      {brands?.map((brand) => (
         <Brands key={brand.id} brand={brand}></Brands>
       ))}
       </div>
