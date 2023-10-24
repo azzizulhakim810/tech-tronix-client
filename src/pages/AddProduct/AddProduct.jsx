@@ -151,7 +151,7 @@ const AddProduct = () => {
 
             <div className="form-control md:w-1/2 md:ml-4">
               <label className="label">
-                <span className="label-text">Price</span>
+                <span className="label-text">Price ($)</span>
               </label>
 
               <label className="input-group">

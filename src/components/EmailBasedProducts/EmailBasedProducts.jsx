@@ -1,19 +1,19 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 /* import { BsCartCheck } from 'react-icons/bs';
 import { BiLogoFacebook, BiLogoTwitter, BiLogoInstagram, BiLogoLinkedin, BiSolidStar } from 'react-icons/bi'; */
 
-const EmailBasedProducts = ({ specificFilteredProduct }) => {
+const EmailBasedProducts = ({ specificFilteredProduct, setLoggedUser, loggedUser }) => {
   const { _id, name, brandName, url, price, rating, type } =
     specificFilteredProduct || {};
 
     // const [] = useState();
 
 
-  const handleDelete = (_id) => {
-    // console.log(_id);
+  const handleDelete = _id => {
+    // console.log(typeof _id);
 
     Swal.fire({
       title: "Are you sure?",
@@ -33,6 +33,8 @@ const EmailBasedProducts = ({ specificFilteredProduct }) => {
             console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "The Product has been deleted.", "success");
+              const remaining = loggedUser.filter(pd => pd._id != _id);
+              setLoggedUser(remaining);
             }
           });
       }
@@ -90,6 +92,8 @@ const EmailBasedProducts = ({ specificFilteredProduct }) => {
 
 EmailBasedProducts.propTypes = {
   specificFilteredProduct: PropTypes.object,
+  loggedUser:PropTypes.array,
+  setLoggedUser: PropTypes.func
 };
 
 export default EmailBasedProducts;

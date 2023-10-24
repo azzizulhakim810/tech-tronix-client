@@ -12,6 +12,7 @@ const MyCart = () => {
   // console.log(emailBasedProducts, getUser);
 
   const [loggedUser, setLoggedUser] = useState(emailBasedProducts);
+  // const [addedProduct, setAddedProduct] = useState(emailBasedProducts)
 
   useEffect(() => {
     const filtered = emailBasedProducts?.filter(p => 
@@ -21,11 +22,15 @@ const MyCart = () => {
 
   }, [emailBasedProducts, getUser])
 
-  // console.log(loggedUser);
+  // console.log(addedProduct);
   return (
     <div className="relative grid grid-cols-2 gap-10 w-8/12 mx-auto py-10 pb-20">
       {
-        loggedUser?.map(specificFilteredProduct => <EmailBasedProducts  key={specificFilteredProduct._id}  specificFilteredProduct = {specificFilteredProduct}>
+        loggedUser?.map(specificFilteredProduct => <EmailBasedProducts  key={specificFilteredProduct._id}
+         specificFilteredProduct = {specificFilteredProduct}
+         loggedUser = {loggedUser}
+         setLoggedUser = {setLoggedUser}
+         >
 
           </EmailBasedProducts>
         )

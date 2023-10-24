@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
-import { Link, useLoaderData, useNavigate, useParams } from 'react-router-dom';
+import  { useContext } from 'react';
+
+import { Link, useLoaderData, useNavigate} from 'react-router-dom';
 import { BsCartCheck } from 'react-icons/bs';
 import { BiLogoFacebook, BiLogoTwitter, BiLogoInstagram, BiLogoLinkedin, BiSolidStar } from 'react-icons/bi';
 import { AuthContext } from '../../providers/AuthProvider';
