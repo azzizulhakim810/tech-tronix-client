@@ -27,17 +27,22 @@ export const router = createBrowserRouter([
       },
       {
         path:'/allProducts/:brandName',
-        element:<BrandBasedProducts></BrandBasedProducts>,
+        element:<PrivateRoute><BrandBasedProducts></BrandBasedProducts></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/products/${params.brandName}`)
       },
       {
         path:'/singleProduct/:id',
-        element:<SingleProductDetails></SingleProductDetails>,
+        element:<PrivateRoute><SingleProductDetails></SingleProductDetails></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/products/single/${params.id}`)
       },
       {
+        path:'/update/:id',
+        element:
+      },
+      {
         path:'/myCart',
-        element:<PrivateRoute><MyCart></MyCart></PrivateRoute>
+        element:<PrivateRoute><MyCart></MyCart></PrivateRoute>,
+        loader: () => fetch ('http://localhost:5000/user')
       },
       {
         path:'/login',
