@@ -1,6 +1,7 @@
 import Brands from "../../components/Brands/Brands";
 import { BsCurrencyDollar, BsGift, BsTruck } from 'react-icons/bs';
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const Home = () => {
@@ -25,21 +26,24 @@ const Home = () => {
       <div
         className="hero h-[85vh]"
         style={{
-          backgroundImage: "url(https://i.ibb.co/wzqv9j6/bg-4-new.jpg)",
+          backgroundImage: "url(https://i.ibb.co/rvz0K0r/home-bg1.jpg)",
         }}
       >
         <div className="hero-overlay bg-opacity-70"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-2xl">
             <h1 className="mb-5 text-7xl font-bold text-white">
-              Walking street under the tunnel
+              World Biggest Electronic Shop
             </h1>
             <p className="mb-5 text-white text-lg font-medium">
-              Get Ready For The Next Event
+              Buy Product From The Top Brand
             </p>
-            <button className="btn bg-red-600 hover:bg-white  text-white hover:text-red-600 rounded-none border-none md:text-base text-xs px-4">
-              Buy Ticket
+           <Link to='/addProduct'>
+           <button className="select-none rounded-none bg-red-600 text-white py-3 px-6 text-center align-middle font-sans text-base font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+      type="button">
+              Check Out
             </button>
+           </Link>
           </div>
         </div>
       </div>
@@ -50,11 +54,11 @@ const Home = () => {
           Our Brands
         </h1>
         <div className="flex flex-col w-32 mx-auto mb-5">
-          <div className="py-[0.9px] my-3 bg-red-600"></div>
+          <div className="py-[1px] my-3 bg-red-600"></div>
         </div>
         
 
-      <div className="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-1 gap-5 w-11/12 mx-auto">
+      <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-5 w-11/12 mx-auto">
         {
           loading && <span className="loading loading-spinner text-error text-6xl mx-auto flex justify-center items-center py-5 "></span>
         }
@@ -66,11 +70,11 @@ const Home = () => {
 
       {/* FAQ Section */}
       <div className="py-12">
-        <h1 className="text-4xl text-center py-3 text-black font-bold">
+        <h1 className="text-4xl text-center py-3  text-black font-bold">
           Frequently Asked Question
         </h1>
 
-        <div className="flex flex-col w-32 mx-auto mb-5">
+        <div className="flex flex-col w-32 mx-auto mb-10">
           <div className="py-[1px] my-3 bg-red-600"></div>
         </div>
 

@@ -1,51 +1,53 @@
-import { Link } from "react-router-dom";
-
 
 const Carousel = () => {
   return (
     <div className="z-0">
-      <div className="carousel w-full">
+      <div className="carousel w-full -mt-[90px]">
 
-  <div id="slide1" className="carousel-item relative w-full h-screen" style={{backgroundImage: 'url(/src/assets/img1.jpg)', width:'100%', backgroundSize:'contain', backgroundPosition:'center', backgroundRepeat:'no-repeat', opacity:'100%'}}>
+  <div id="slide1" className="carousel-item relative w-full h-screen" style={{backgroundImage: 'url(https://i.ibb.co/hYLCDgR/bg5.jpg)', width:'100%', backgroundSize:'cover', backgroundPosition:'center', backgroundRepeat:'no-repeat', opacity:'100%'}}>
 
-    <div className="absolute transform -translate-y-1/2 left-32 w-1/3 top-1/2 font-normal text-black">
-    <p className="mb-5">All new 13-inch & 15-inch</p>
-      <h1 className="mb-8 text-5xl font-medium leading-tight">MacBook with retina display</h1>
-      <Link to="/shop"><button className="btn bg-emerald-400 text-white border-0 rounded-none px-10">SHOP NOW</button></Link>
+    <div className="flex flex-col justify-center items-center font-normal w-full text-white">
+    <div className=" text-center transform -translate-y-24">
+    <p className="mb-2">iPhone 15</p>
+      <h1 className="mb-8 text-6xl font-serif font-medium leading-tight">Forged in Titanium.</h1>
+    </div>
       </div>
+
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide4" className="btn btn-circle">❮</a> 
+      <a href="#slide3" className="btn btn-circle">❮</a> 
       <a href="#slide2" className="btn btn-circle">❯</a>
     </div>
   </div> 
 
-  <div id="slide2" className="carousel-item relative w-full h-screen" style={{backgroundImage: 'url(/src/assets/img2.jpg)', width:'100%', backgroundSize:'contain', backgroundPosition:'center', backgroundRepeat:'no-repeat'}}>
-    
-  <div className="absolute transform -translate-y-1/2 left-32 w-1/3 top-1/2 font-normal text-black">
-    <p className="mb-5">Apple Watch Series 7 </p>
-      <h1 className="mb-8 text-5xl font-medium leading-tight">Future of health is on your wrist </h1>
-      <Link to="/shop"><button className="btn bg-emerald-400 text-white border-0 rounded-none px-10">SHOP NOW</button></Link>
+  <div id="slide2" className="carousel-item relative w-full h-screen" style={{backgroundImage: 'url(https://i.ibb.co/ngbph66/bg1.jpg)', width:'100%', backgroundSize:'cover', backgroundPosition:'center', backgroundRepeat:'no-repeat'}}>
+
+  <div className="flex flex-col justify-center items-start font-normal w-full text-black">
+    <div className="text-left transform translate-x-28">
+    <p className="mb-2">Google Pixel Watch 2</p>
+      <h1 className="mb-8 text-6xl w-4/6 font-serif font-medium leading-tight">Connected to everywhere.</h1>
+    </div>
       </div>
 
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide1" className="btn btn-circle">❮</a> 
       <a href="#slide3" className="btn btn-circle">❯</a>
     </div>
-  </div> 
-
-  <div id="slide3" className="carousel-item relative w-full h-screen" style={{backgroundImage: 'url(/src/assets/img3.jpg)', width:'100%', backgroundSize:'contain', backgroundPosition:'center', backgroundRepeat:'no-repeat'}}>
-
-  <div className="absolute transform -translate-y-1/2 left-32 w-1/3 top-1/2 font-normal text-black">
-    <p className="mb-5">Your new superpower </p>
-      <h1 className="mb-8 text-5xl font-medium leading-tight">iPhone 13 Series in Astor</h1>
-      <Link to="/shop"><button className="btn bg-emerald-400 text-white border-0 rounded-none px-10">SHOP NOW</button></Link>
-      </div>
-
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide2" className="btn btn-circle">❮</a> 
-      <a href="#slide1" className="btn btn-circle">❯</a>
-    </div>
   </div>
+
+  <div id="slide3" className="carousel-item relative w-full h-screen" style={{backgroundImage: 'url(https://i.ibb.co/BqhJccj/bg7.jpg)', width:'100%', backgroundSize:'cover', backgroundPosition:'top', backgroundRepeat:'no-repeat'}}>
+    
+    <div className="flex flex-col justify-center items-start font-normal w-full text-black">
+      <div className=" text-left transform translate-x-28">
+      <p className="mb-2">Galaxy Tab S</p>
+        <h1 className="mb-8 text-6xl w-4/6 font-serif font-medium leading-tight">Change the way you note</h1>
+      </div>
+        </div>
+  
+      <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide2" className="btn btn-circle">❮</a> 
+        <a href="#slide1" className="btn btn-circle">❯</a>
+      </div>
+    </div> 
 
 
 </div>

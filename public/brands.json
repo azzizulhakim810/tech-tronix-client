@@ -2,31 +2,31 @@
   {
     "id": 1,
     "brandName": "LG",
-    "image": "https://i.ibb.co/nDTnkj5/Artboard-3.png"
+    "image": "https://i.ibb.co/xgR6Bp8/Lg.jpg"
   },
   {
     "id": 2,
     "brandName": "SAMSUNG",
-    "image": "https://i.ibb.co/YWP7J8D/Artboard-4.png"
+    "image": "https://i.ibb.co/NW7Z2Kv/Samsung.jpg"
   },
   {
     "id": 3,
     "brandName": "PANASONIC",
-    "image": "https://i.ibb.co/1z5qk3G/Artboard-2.png"
+    "image": "https://i.ibb.co/sWZnmjv/Panasonic.jpg"
   },
   {
     "id": 4,
     "brandName": "GOOGLE",
-    "image": "https://i.ibb.co/bvCFnhn/Artboard-6.png"
+    "image": "https://i.ibb.co/6BVr7nm/Google.jpg"
   },
   {
     "id": 5,
     "brandName": "SONY",
-    "image": "https://i.ibb.co/DtBPC0C/Artboard-1.png"
+    "image": "https://i.ibb.co/vzMqBdy/Sony.jpg"
   },
   {
     "id": 6,
     "brandName": "APPLE",
-    "image": "https://i.ibb.co/9WV6mNn/Artboard-5.png"
+    "image": "https://i.ibb.co/dDmcr52/Apple.jpg"
   }
 ]

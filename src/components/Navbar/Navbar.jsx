@@ -69,7 +69,7 @@ const Navbar = () => {
   );
   // console.log(user);
   return (
-    <div className="w-full bg-white z-50 relative border-b-2">
+    <div className="w-full relative bg-white z-50  border-b-2">
       <div className="navbar shadow-red-500 text-black w-11/12 mx-auto py-5">
         <div className="navbar-start">
           <div className="dropdown">

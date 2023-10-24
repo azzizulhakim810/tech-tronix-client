@@ -6,12 +6,12 @@ const Brands = ({ brand }) => {
   const { brandName, image } = brand;
   return (
     <div className="pb-5">
-      <div className=" flex justify-center align-middle items-center text-center shadow-md  rounded-xl bg-white bg-clip-border text-gray-700 px-3 pb-10">
+      <div className=" flex justify-center align-middle items-center text-center shadow-md  rounded-xl bg-white bg-clip-border text-gray-700 ">
         <Link to={`/allProducts/${brandName}`}>
         <div>
-          <img src={image} className="-mt-5 w-40 object-cover" />
-          <p className="-mt-8 block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-            {name}
+          <img src={image} className="h-full w-full object-cover" />
+          <p className="block py-4 font-sans text-lg font-bold leading-relaxed text-blue-gray-900 antialiased">
+            {brandName}
           </p>
         </div>
         </Link>
