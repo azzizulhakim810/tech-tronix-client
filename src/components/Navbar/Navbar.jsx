@@ -33,7 +33,7 @@ const Navbar = () => {
 
   // Menu Item Creation
   const menuItem = (
-    <div className="text-[15px] font-medium lg:flex  md:grid grid-cols-1">
+    <div className="text-[15px] font-medium lg:flex grid grid-cols-1">
       <NavLink
         to="/"
         className={({ isActive, isPending }) =>
@@ -112,16 +112,14 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-8 z-[1] px-3 py-4 shadow bg-red-600 rounded-none w-[200px] grid grid-cols-1 overflow-y-scroll"
+              className="menu menu-sm dropdown-content mt-8 z-[1] px-3 py-4 shadow bg-red-600 rounded-none w-[200px]"
             >
               {menuItem}
             </ul>
           </div>
-         <div className="hidden md:flex">
-         <Link className=" normal-case text-2xl font-bold flex align-middle justify-between items-center">
-            <img className="w-28 md:w-40" src={logo} alt="" />
+          <Link className=" normal-case text-2xl font-bold flex align-middle justify-between items-center">
+            <img className="w-40 -ml-3" src={logo} alt="" />
           </Link>
-         </div>
         </div>
 
         <div className="navbar-center hidden lg:flex">
@@ -194,7 +192,7 @@ const Navbar = () => {
         </div>
 
         {/* For mobile only  */}
-        <div className="navbar-end md:hidden flex space-x-4 w-full">
+        <div className="navbar-end md:hidden flex space-x-3 w-full">
           {/* Name */}
           <div>
             <h1 className="text-red-600 w-16 font-bold uppercase">
@@ -221,14 +219,14 @@ const Navbar = () => {
             {user ? (
               <button
                 onClick={handleLogOut}
-                className="btn bg-red-600 hover:bg-white uppercase text-white hover:text-red-600 rounded-none"
+                className="btn bg-red-600 hover:bg-white uppercase text-white hover:text-red-600 border-none px-2 rounded-none"
               >
                 <BiLogOutCircle className="text-2xl hidden"></BiLogOutCircle>
                 <p >Logout</p>
               </button>
             ) : (
               <Link to="/login">
-                <button className="btn bg-red-600 hover:bg-white  text-white hover:text-red-600 rounded-none  md:text-base text-xs px-2">
+                <button className="btn bg-red-600 hover:bg-white  text-white hover:text-red-600 rounded-none  md:text-base border-none text-xs px-2">
                   <BiLogInCircle className="text-2xl hidden"></BiLogInCircle>
                   <p>Login</p>
                 </button>
