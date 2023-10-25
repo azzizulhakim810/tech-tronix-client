@@ -8,7 +8,6 @@ import Swal from 'sweetalert2';
 
 const SingleProductDetails = () => {
 
-  const navigate = useNavigate();
   const {user} = useContext(AuthContext);
   const userEmail = user.email;
 
@@ -16,11 +15,11 @@ const SingleProductDetails = () => {
   const { name, brandName, url, description, price, rating, type } = foundSingleSearchedProduct || {};
 
   const productAndEmail = { name, brandName, url, description, price, rating, type, userEmail }
-  // console.log(productAndEmail, userEmail);
+
 
   // Submit info to database 
   const handleSubmitInfo = () => {
-    // console.log('hello');
+ 
 
     fetch('https://tech-tronix-server-de42tnfa0-ah-jims-projects.vercel.app/user', {
       method: 'POST',
@@ -35,7 +34,7 @@ const SingleProductDetails = () => {
       "Successfully Added Product To Cart",
       'success'
     )
-    navigate('/myCart');
+ 
   }
 
 
@@ -51,9 +50,7 @@ const SingleProductDetails = () => {
         <div className="hero-content text-left text-neutral-content w-10/12">
           <div className="w-full">
             <h1 className="mb-5 md:text-4xl text-2xl font-bold text-white"> Details about {name}</h1>
-           {/*  <p className="mb-5 text-white text-lg font-medium">
-              Get Ready For The Event
-            </p> */}
+           
           </div>
         </div>
       </div>
