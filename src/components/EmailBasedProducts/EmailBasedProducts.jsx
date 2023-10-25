@@ -25,7 +25,7 @@ const EmailBasedProducts = ({ specificFilteredProduct, setLoggedUser, loggedUser
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/user/${_id}`, {
+        fetch(`https://tech-tronix-server-de42tnfa0-ah-jims-projects.vercel.app/user/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

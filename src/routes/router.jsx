@@ -29,22 +29,22 @@ export const router = createBrowserRouter([
       {
         path:'/allProducts/:brandName',
         element:<PrivateRoute><BrandBasedProducts></BrandBasedProducts></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/products/${params.brandName}`)
+        loader: ({params}) => fetch(`https://tech-tronix-server-de42tnfa0-ah-jims-projects.vercel.app/products/${params.brandName}`)
       },
       {
         path:'/singleProduct/:id',
         element:<PrivateRoute><SingleProductDetails></SingleProductDetails></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/products/single/${params.id}`)
+        loader: ({params}) => fetch(`https://tech-tronix-server-de42tnfa0-ah-jims-projects.vercel.app/products/single/${params.id}`)
       },
       {
         path:'/update/:id',
         element:<UpdateProduct></UpdateProduct>,
-        loader: ({params}) => fetch(`http://localhost:5000/products/update/${params.id}`)
+        loader: ({params}) => fetch(`https://tech-tronix-server-de42tnfa0-ah-jims-projects.vercel.app/products/update/${params.id}`)
       },
       {
         path:'/myCart',
         element:<PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch ('http://localhost:5000/user')
+        loader: () => fetch ('https://tech-tronix-server-de42tnfa0-ah-jims-projects.vercel.app/user')
       },
       {
         path:'/login',

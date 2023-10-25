@@ -36,7 +36,7 @@ const UpdateProduct = () => {
     console.log(updatedProduct);
 
     // send data to the server
-    fetch(`http://localhost:5000/products/update/${_id}`, {
+    fetch(`https://tech-tronix-server-de42tnfa0-ah-jims-projects.vercel.app/products/update/${_id}`, {
       method:'PUT',
       headers: {
         'content-type': 'application/json'

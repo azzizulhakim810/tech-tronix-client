@@ -63,7 +63,7 @@ const Register = () => {
         'success'
       );
 
-      fetch('http://localhost:5000/user', {
+      fetch('https://tech-tronix-server-de42tnfa0-ah-jims-projects.vercel.app/user', {
         method:'POST',
         headers: {
           'content-type': 'application/json'

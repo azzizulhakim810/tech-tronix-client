@@ -31,7 +31,7 @@ const AddProduct = () => {
     console.log(newProduct);
 
     // send data to the server
-    fetch('http://localhost:5000/product', {
+    fetch('https://tech-tronix-server-de42tnfa0-ah-jims-projects.vercel.app/product', {
       method:'POST',
       headers: {
         'content-type': 'application/json'
