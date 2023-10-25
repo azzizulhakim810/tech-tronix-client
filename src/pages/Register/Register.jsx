@@ -18,7 +18,40 @@ const Register = () => {
     const photoURL = form.photoUrl.value;
     const password = form.password.value;
     const user = {name, email, photoURL, password};
-    console.log(user);
+    // console.log(password.length);
+
+    // Password Validation 
+    if(!/([?=.*?[A-Z])/.test(password)) {
+      // setErrorMessage('Password Should have at least 1 uppercase');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Password Should have at least 1 uppercase',
+      })
+      return;
+    }
+
+    else if(!/(?=.*?[#?!@$%^&*-])/.test(password)) {
+      // setErrorMessage('Password Should have at least 1 uppercase');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Password Should have at least 1 special character',
+      })
+      return;
+    }
+
+    else if(password.length < 6) {
+      // setErrorMessage('Password Should be at least 6 character or longer');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Password Should be at least 6 character or longer',
+      })
+      return;
+    }
+
+   
 
     // Create User 
     createUser(email, password)
@@ -49,13 +82,13 @@ const Register = () => {
       navigate('/')
     })
     .catch(error=> {
-      const errorMessage = error.message;
-      console.error(error.message)
-      // setErrorMessage(errorMessage)
+      const errorMessageFromFirebase = error.message;
+      // console.error(error.message)
+      // setErrorMessage(errorMessageFromFirebase)
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: `${errorMessage}`,
+        text: `${errorMessageFromFirebase}`,
       })
     })
 
