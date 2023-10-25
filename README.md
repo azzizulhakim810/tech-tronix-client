@@ -1,4 +1,4 @@
-# [Electronics Site](#)
+# [TechTronix](https://tech-tronix-assignment.web.app/)
 
 * Using this site anyone can see brand based products & see details about those.
 * User can add products according to the add product page by fulfilling the required details.
