@@ -50,7 +50,7 @@ const SingleProductDetails = () => {
         <div className="hero-overlay bg-opacity-70 "></div>
         <div className="hero-content text-left text-neutral-content w-10/12">
           <div className="w-full">
-            <h1 className="mb-5 text-4xl font-bold text-white"> Details about {name}</h1>
+            <h1 className="mb-5 md:text-4xl text-2xl font-bold text-white"> Details about {name}</h1>
            {/*  <p className="mb-5 text-white text-lg font-medium">
               Get Ready For The Event
             </p> */}
@@ -58,12 +58,12 @@ const SingleProductDetails = () => {
         </div>
       </div>
 
-      <div className=" px-10 py-10 w-10/12 mx-auto  z-10 relative grid grid-cols-4 gap-16 items-center">
+      <div className=" px-10 py-10 w-10/12 mx-auto  z-10 relative grid lg:grid-cols-4 md:grid-cols-1 gap-16 items-center">
         <div className="col-span-2 ">
         <img className="w-full border-2 border-red-600" src={url} alt="" />
         </div>
        <div className="col-span-2">
-       <h1 className="mb-5 text-4xl font-bold text-red-600">{name}</h1>
+       <h1 className="mb-5 md:text-4xl text-2xl font-bold text-red-600">{name}</h1>
        <h1 className=" text-xl font-bold "> ${price}</h1>
        
        <p className="py-2 text-lg text-gray-600 font-medium">

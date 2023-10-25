@@ -24,7 +24,7 @@ const MyCart = () => {
 
   // console.log(addedProduct);
   return (
-    <div className="relative grid grid-cols-2 gap-10 w-8/12 mx-auto py-10 pb-20">
+    <div className="relative grid lg:grid-cols-2 md:grid-cols-1 gap-10 md:w-8/12 w-10/12  mx-auto py-10 pb-20">
       {
         loggedUser?.map(specificFilteredProduct => <EmailBasedProducts  key={specificFilteredProduct._id}
          specificFilteredProduct = {specificFilteredProduct}

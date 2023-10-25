@@ -56,7 +56,7 @@ const AddProduct = () => {
   return (
     <div className="">
       <div className="w-8/12 mx-auto py-10 pb-24">
-        <h1 className="text-4xl text-center py-3  font-bold uppercase">
+        <h1 className="md:text-4xl text-3xl text-center py-3  font-bold uppercase">
           Add a Product
         </h1>
         <div className="flex flex-col w-32 mx-auto mb-5">

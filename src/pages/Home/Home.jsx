@@ -32,7 +32,7 @@ const Home = () => {
         <div className="hero-overlay bg-opacity-70"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-2xl">
-            <h1 className="mb-5 text-7xl font-bold text-white">
+            <h1 className="mb-5 text-5xl md:text-7xl font-bold text-white">
               World Biggest Electronic Shop
             </h1>
             <p className="mb-5 text-white text-lg font-medium">
@@ -58,7 +58,7 @@ const Home = () => {
         </div>
         
 
-      <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-5 w-11/12 mx-auto">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 w-11/12 mx-auto">
         {
           loading && <span className="loading loading-spinner text-error text-6xl mx-auto flex justify-center items-center py-5 "></span>
         }
@@ -141,25 +141,25 @@ const Home = () => {
 
       {/* After Sell  */}
 
-      <div className="py-12 pb-16 grid md:grid-cols-3 grid-cols-1 gap-2 w-10/12 mx-auto">
-        <div className=" text-center w-[90%] py-6 px-4 border-[3px] border-gray-300 rounded-xl">
-          <div className="flex justify-evenly items-center">
+      <div className="py-12 pb-16 grid lg:grid-cols-3 md:grid-cols-1 gap-2 w-10/12 mx-auto">
+        <div className=" text-center w-[90%] py-6 px-4 border-[3px] border-gray-300 rounded-xl mx-auto">
+          <div className="flex lg:justify-evenly md:justify-center md:gap-2 items-center">
             <BsCurrencyDollar className="text-3xl text-red-500"></BsCurrencyDollar>
             <h1 className="text-3xl font-bold ">MONEY BACK</h1>
           </div>
           <p className="text-gray-500 pt-2">30 DAY MONEY BACK GUARANTEE</p>
         </div>
 
-        <div className=" text-center w-[90%] py-6 px-4 border-[3px] border-gray-300 rounded-xl">
-          <div className="flex justify-evenly items-center">
+        <div className=" text-center w-[90%] py-6 px-4 border-[3px] border-gray-300 rounded-xl mx-auto">
+          <div className="flex lg:justify-evenly md:justify-center md:gap-2 items-center">
             <BsGift className="text-3xl text-red-500"></BsGift>
             <h1 className="text-3xl font-bold  ">SPECIAL SALE</h1>
           </div>
           <p className="text-gray-500 pt-2">ALL ITEMS-SALE UP TO 20% OFF</p>
         </div>
 
-        <div className=" text-center w-[90%] py-6 px-4 border-[3px] border-gray-300 rounded-xl">
-          <div className="flex justify-evenly items-center">
+        <div className=" text-center w-[90%] py-6 px-4 border-[3px] border-gray-300 rounded-xl mx-auto">
+          <div className="flex lg:justify-evenly md:justify-center md:gap-2 items-center">
             <BsTruck className="text-3xl text-red-500"></BsTruck>
             <h1 className="text-3xl font-bold ">FREE SHIPPING</h1>
           </div>

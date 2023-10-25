@@ -43,8 +43,8 @@ const EmailBasedProducts = ({ specificFilteredProduct, setLoggedUser, loggedUser
 
   return (
     <div>
-      <div className="relative flex flex-col text-gray-700 bg-white shadow-lg border-x-2 w-full rounded-sm bg-clip-border p-5">
-        <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white h-full rounded-sm bg-clip-border">
+      <div className="relative flex flex-col text-gray-700 bg-white shadow-lg border-x-2 w-full rounded-sm bg-clip-border p-0 md:p-5">
+        <div className="relative mx-0  mt-4 overflow-hidden text-gray-700 bg-white h-full rounded-sm bg-clip-border">
           <img src={url} className="object-cover w-full h-52" />
         </div>
 
