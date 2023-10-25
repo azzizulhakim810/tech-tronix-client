@@ -14,7 +14,7 @@ const BrandBasedProducts = () => {
       <Carousel></Carousel>
       <h1 className="text-3xl text-center py-10 mt-5 text-black font-bold uppercase"> 
       {
-        loadBrandBasedProducts.length <= 0 ? 'Not Found!' :  
+        loadBrandBasedProducts.length <= 0 ? 'Nothing Found!' :  
         <>
         All Products of  {loadBrandBasedProducts[0]?.brandName}
         </>

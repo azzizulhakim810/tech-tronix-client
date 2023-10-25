@@ -40,7 +40,7 @@ const SingleProductDetails = () => {
 
 
   return (
-    <div className="bg-white">
+    <div className="">
       <div
         className="hero h-[30vh]"
         style={{
@@ -58,22 +58,22 @@ const SingleProductDetails = () => {
         </div>
       </div>
 
-      <div className="bg-white px-10 py-10 w-10/12 mx-auto  z-10 relative grid grid-cols-4 gap-16 items-center">
+      <div className=" px-10 py-10 w-10/12 mx-auto  z-10 relative grid grid-cols-4 gap-16 items-center">
         <div className="col-span-2 ">
         <img className="w-full border-2 border-red-600" src={url} alt="" />
         </div>
        <div className="col-span-2">
        <h1 className="mb-5 text-4xl font-bold text-red-600">{name}</h1>
-       <h1 className=" text-xl font-bold text-black"> ${price}</h1>
+       <h1 className=" text-xl font-bold "> ${price}</h1>
        
        <p className="py-2 text-lg text-gray-600 font-medium">
-       <span className='text-black'>Brand:</span> {brandName}
+       <span className=''>Brand:</span> {brandName}
             </p>
        <p className=" text-gray-600 text-lg font-medium">
-       <span className='text-black'>Type:</span> {type}
+       <span className=''>Type:</span> {type}
             </p>
        <p className="py-2 text-gray-600 text-lg font-medium flex items-center justify-start">
-       <span className='text-black pe-1 '>Rating: </span> <span className='text-red-600'>{rating}</span><BiSolidStar className='text-red-600'></BiSolidStar>
+       <span className=' pe-1 '>Rating: </span> <span className='text-red-600'>{rating}</span><BiSolidStar className='text-red-600'></BiSolidStar>
             </p>
        <p className=" py-2 pb-5 text-gray-600 text-lg font-normal">
               {description}

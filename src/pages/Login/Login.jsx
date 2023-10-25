@@ -5,13 +5,17 @@ import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const Login = () => {
-  const {googleLogin, login} = useContext(AuthContext);
+  const {googleLogin, login, loading} = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   // console.log(location);
 
+  if(loading) {
+    return <span className="loading loading-spinner text-error text-6xl mx-auto flex justify-center items-center py-5 "></span>
+  }
+  
   const handleLogIn = (e) => {
-   
+
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
@@ -19,6 +23,7 @@ const Login = () => {
     const password = form.password.value;
     const user = {name, email, password};
     console.log(user);
+   
    
 
     login(email, password)
@@ -67,7 +72,7 @@ const Login = () => {
     <div>
       <div className="flex justify-center lg:h-[90vh] h-full items-center my-20 p-10">
         <form onSubmit={handleLogIn}>
-          <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+          <div className="relative flex w-96 flex-col rounded-xl border-2 bg-clip-border text-gray-700 shadow-md">
             <div className="relative mx-4 -mt-6 mb-4 grid h-28 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-red-600 to-red-400 bg-clip-border text-white shadow-lg shadow-pink-500/40">
               <h3 className="block font-sans text-3xl font-semibold leading-snug tracking-normal text-white antialiased">
                 Log In

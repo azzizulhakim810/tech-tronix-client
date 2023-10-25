@@ -60,9 +60,9 @@ const UpdateProduct = () => {
 
 
   return (
-    <div className="bg-[#F4F3F0]">
+    <div className="">
       <div className="w-8/12 mx-auto py-10 pb-24">
-        <h1 className="text-4xl text-center py-3 text-black font-bold uppercase">
+        <h1 className="text-4xl text-center py-3  font-bold uppercase">
           Update a Product
         </h1>
         <div className="flex flex-col w-32 mx-auto mb-5">
@@ -204,7 +204,7 @@ const UpdateProduct = () => {
             </div>
           </div>
 
-          <input type="submit" value="Add Product" className="btn btn-block bg-red-600 hover:bg-red-800 text-white" />
+          <input type="submit" value="Update Product" className="btn btn-block uppercase bg-red-600 hover:bg-red-800 text-white" />
         </form>
       </div>
     </div>

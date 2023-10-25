@@ -50,7 +50,7 @@ const Home = () => {
 
       {/* Brands  */}
       <div className="py-10">
-        <h1 className="text-4xl text-center py-3 text-black font-bold">
+        <h1 className="text-4xl text-center py-3  font-bold">
           Our Brands
         </h1>
         <div className="flex flex-col w-32 mx-auto mb-5">
@@ -70,7 +70,7 @@ const Home = () => {
 
       {/* FAQ Section */}
       <div className="py-12">
-        <h1 className="text-4xl text-center py-3  text-black font-bold">
+        <h1 className="text-4xl text-center py-3   font-bold">
           Frequently Asked Question
         </h1>
 
@@ -80,9 +80,9 @@ const Home = () => {
 
         {/* accordion  */}
         <div className="md:w-8/12 w-10/12 mx-auto">
-          <div className="collapse collapse-plus bg-white py-3 rounded-none my-[1px] border-t-[1px] border-b-[1px]">
+          <div className="collapse collapse-plus  py-3 rounded-none my-[1px] border-t-[1px] border-b-[1px]">
             <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-[18px] font-medium text-black ">
+            <div className="collapse-title text-[18px] font-medium  ">
             1. What is your website about?
             </div>
             <div className="collapse-content">
@@ -91,9 +91,9 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="collapse collapse-plus bg-white py-3 rounded-none my-[1px] border-b-[1px]">
+          <div className="collapse collapse-plus  py-3 rounded-none my-[1px] border-b-[1px]">
             <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-[18px] font-medium text-black">
+            <div className="collapse-title text-[18px] font-medium ">
             2. What kind of electronic products do you cover?
             </div>
             <div className="collapse-content">
@@ -102,9 +102,9 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="collapse collapse-plus bg-white py-3 rounded-none my-[1px] border-b-[1px]">
+          <div className="collapse collapse-plus  py-3 rounded-none my-[1px] border-b-[1px]">
             <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-[18px] font-medium text-black">
+            <div className="collapse-title text-[18px] font-medium ">
             3. Are the product reviews and recommendations unbiased?
             </div>
             <div className="collapse-content">
@@ -113,9 +113,9 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="collapse collapse-plus bg-white py-3 rounded-none my-[1px] border-b-[1px]">
+          <div className="collapse collapse-plus  py-3 rounded-none my-[1px] border-b-[1px]">
             <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-[18px] font-medium text-black">
+            <div className="collapse-title text-[18px] font-medium ">
             4. Is my personal information secure on your website?
             </div>
             <div className="collapse-content">
@@ -124,9 +124,9 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="collapse collapse-plus bg-white py-3 rounded-none my-[1px] border-b-[1px]">
+          <div className="collapse collapse-plus  py-3 rounded-none my-[1px] border-b-[1px]">
             <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-[18px] font-medium text-black">
+            <div className="collapse-title text-[18px] font-medium ">
             5. Can I request reviews for specific products?
             </div>
             <div className="collapse-content">
@@ -145,7 +145,7 @@ const Home = () => {
         <div className=" text-center w-[90%] py-6 px-4 border-[3px] border-gray-300 rounded-xl">
           <div className="flex justify-evenly items-center">
             <BsCurrencyDollar className="text-3xl text-red-500"></BsCurrencyDollar>
-            <h1 className="text-3xl font-bold text-black">MONEY BACK</h1>
+            <h1 className="text-3xl font-bold ">MONEY BACK</h1>
           </div>
           <p className="text-gray-500 pt-2">30 DAY MONEY BACK GUARANTEE</p>
         </div>
@@ -153,7 +153,7 @@ const Home = () => {
         <div className=" text-center w-[90%] py-6 px-4 border-[3px] border-gray-300 rounded-xl">
           <div className="flex justify-evenly items-center">
             <BsGift className="text-3xl text-red-500"></BsGift>
-            <h1 className="text-3xl font-bold text-black ">SPECIAL SALE</h1>
+            <h1 className="text-3xl font-bold  ">SPECIAL SALE</h1>
           </div>
           <p className="text-gray-500 pt-2">ALL ITEMS-SALE UP TO 20% OFF</p>
         </div>
@@ -161,7 +161,7 @@ const Home = () => {
         <div className=" text-center w-[90%] py-6 px-4 border-[3px] border-gray-300 rounded-xl">
           <div className="flex justify-evenly items-center">
             <BsTruck className="text-3xl text-red-500"></BsTruck>
-            <h1 className="text-3xl font-bold text-black">FREE SHIPPING</h1>
+            <h1 className="text-3xl font-bold ">FREE SHIPPING</h1>
           </div>
           <p className="text-gray-500 pt-2">FREE SHIP-ON ODER OVER $600.00</p>
         </div>
