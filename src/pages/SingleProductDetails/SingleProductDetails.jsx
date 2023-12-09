@@ -14,7 +14,7 @@ const SingleProductDetails = () => {
   const foundSingleSearchedProduct = useLoaderData();
   const { name, brandName, url, description, price, rating, type } = foundSingleSearchedProduct || {};
 
-  const productAndEmail = { name, brandName, url, description, price, rating, type, userEmail }
+  const productAndEmail = { name, brandName, url, description, price, rating, type, userEmail };
 
 
   // Submit info to database 
